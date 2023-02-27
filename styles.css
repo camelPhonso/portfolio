@@ -1,0 +1,145 @@
+:root {
+  --color-base: #eee;
+  --color-text: #454141;
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: Georgia, Times, 'Times New Roman', serif
+}
+
+body {
+  background-color: var(--color-base);
+}
+
+.section {
+  padding: 1rem 1rem;
+}
+
+/* ***Navigation Bar*** */
+.navbar{
+  width:100vw;
+  padding:0 2rem;
+  position:fixed;
+  top:0;
+  left:0;
+  display:flex;
+  flex-flow:row nowrap;
+  align-items:center;
+  justify-content: space-between;
+}
+
+.navbar__ampersand {
+  font-size: 2rem;
+}
+
+.navbar__list{
+  display:flex;
+  flex-flow:row nowrap;
+  align-items:center;
+  gap:1rem;
+  list-style: none;
+}
+
+.navbar__list-point{}
+
+@media screen and (min-width:480px) {
+  .navbar {
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 10%;
+    width: 80%;
+  }
+  .navbar__list {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+    gap: 1rem;
+    list-style: none;
+  }
+  
+  .navbar___list-point {
+  }  
+}
+
+/* ***About Section*** */
+.section--about {
+  position: relative;
+  height:110vh;
+  padding-top:3rem;
+}
+
+.about-figure{
+  position:relative;
+}
+
+.about-figure__img{
+  position: absolute;
+  top:-1.5em;
+  left:-1em;
+  width:70vw;
+  z-index: -3;
+  filter: drop-shadow(0 2px 2px rgb(7, 114, 186));
+}
+
+.about-figure__title{
+  color:white;
+  font-size:2.2rem;
+  text-shadow: 0 0 15px black;
+  position: sticky;
+  letter-spacing: 0.2rem;
+}
+
+.about-figure__subtitle{
+  font-size:.8rem;
+  position:absolute;
+  top:2rem;
+  left:4rem;
+}
+
+.about-section__text{
+  max-width:60vw;
+  text-align:right;
+  position:absolute;
+  right:2em;
+  line-height:1.2rem;
+}
+
+@media screen and (min-width: 600px) {
+  .about-figure__img {
+    position:absolute;
+    top:-5em;
+    width:70vw;
+  }
+  
+  .about-figure__title {
+    position:sticky;
+    font-size: 8vw;
+  }
+  
+  .about-figure__subtitle {
+    position: absolute;
+    left: -545px;
+    top: 25px;
+    letter-spacing: 15px;
+    text-shadow: 0 0 15px black;
+    font-size: 1.2vw;
+  }
+  
+  .about-section__text {
+    color:var(--color-text);
+    position:absolute;
+    right:10rem;
+    top:22rem;
+    width:20em;
+    height:10em;
+    font-size:1.5rem;
+    line-height:2rem;
+    letter-spacing:.1em;
+  }  
+}
